@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "aesir-addon",
+  "version": "${version}",
+  "name": "Aesir Addon",
+  "description": "Towny web map radari: 5k blok yakınındaki oyunculari anlik nametag ile gosterir.",
+  "authors": [
+    "jr"
+  ],
+  "contact": {
+    "sources": "https://github.com/AesirMC/AesirAddon"
+  },
+  "icon": "assets/aesir/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "com.aesir.addon.AesirAddon"
+    ]
+  },
+  "mixins": [
+    "aesir-addon.mixins.json"
+  ],
+  "custom": {
+    "meteor-client:color": "225,25,25",
+    "modmenu": {
+      "parent": {
+        "id": "meteor-client"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=${jdk_version}",
+    "minecraft": "${minecraft_version}",
+    "meteor-client": "*"
+  }
+}
